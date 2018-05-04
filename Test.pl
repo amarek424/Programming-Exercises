@@ -16,7 +16,8 @@ while( my $line = <$fh> ) {
 		# Remove special characters
 		# Looks like some characters come out weird because of ANSI encoding
 		$a =~ s/[\$#@~!&*()\[\];.,:?^ '"\\\/]+//g;		
-		$data{$a} += 1;
+		$b = lc $a;
+		$data{$b} += 1;
 	}
 }
 
